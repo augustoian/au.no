@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --branco: #ffffff;
+    --cor-de-fundo: #35075a;
+    --fundo-senha: #31004d;
+    --fundo-texto: #31004d;
+    --borda: #6005aa;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+body {
+    color: var(--branco);
+    background-color: var(--cor-de-fundo);
+    font-family: var(--roboto);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 16px;
+}
+
+.conteudo {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Cabeçalho e Títulos */
+.conteudo-titulo {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.titulo-icone {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+}
+
+.titulo-principal {
+    font-family: var(--roboto-mono);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.titulo-secundario {
+    font-size: 18px;
+    color: #a0aec0;
+}
+
+/* Área do Campo de Senha */
+.conteudo-senha {
+    background: var(--fundo-senha);
+    padding: 24px;
+    border-bottom: 6px solid var(--borda);
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 32px;
+}
+
+.conteudo-senha__label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #a0aec0;
+}
+
+.conteudo-senha__box {
+    display: flex;
+    align-items: center;
+}
+
+#campo-senha {
+    background-color: transparent;
+    border: none;
+    color: var(--branco);
+    font-family: var(--roboto-mono);
+    font-size: 28px;
+    font-weight: 700;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+#campo-senha:focus {
+    outline: none;
+}
+
+/* Painel de Parâmetros */
+.parametro {
+    background-color: var(--fundo-texto);
+    border: 2px solid var(--borda);
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.parametro-titulo {
+    font-family: var(--roboto-mono);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(183, 0, 255, 0.3);
+    padding-bottom: 12px;
+}
+
+.parametro-coluna__senha {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.parametro-senha {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.parametro-senha__titulo {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.parametro-senha-botoes {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.parametro-senha__botao {
+    background-color: var(--borda);
+    color: var(--branco);
+    border: none;
+    font-family: var(--roboto-mono);
+    font-size: 24px;
+    font-weight: 700;
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.parametro-senha__botao:hover {
+    background-color: #9e00b3;
+}
+
+.parametro-senha__botao:active {
+    transform: scale(0.95);
+}
+
+.parametro-senha__texto {
+    font-family: var(--roboto-mono);
+    font-size: 24px;
+    font-weight: 700;
+    min-width: 36px;
+    text-align: center;
+}
+
+/* Responsividade: Tablet / Desktop */
+@media screen and (min-width: 768px) {
+    .conteudo-titulo {
+        margin-top: 0;
+    }
+
+    .titulo-principal {
+        font-size: 32px;
+    }
+
+    .titulo-secundario {
+        font-size: 22px;
+    }
+
+    #campo-senha {
+        font-size: 36px;
+    }
+
+    .parametro-coluna__senha {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .parametro-senha {
+        width: 30%;
+    }
+
+    .parametro-senha-botoes {
+        justify-content: flex-start;
+    }
+}
