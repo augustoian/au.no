@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="conteudo">
+        <section class="conteudo-titulo">
+            <img src="oo.png" alt="Ícone de cadeado destravado" class="titulo-icone">
+            <h1 class="titulo-principal">Gerador de senhas</h1>
+            <h2 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h2>
+        </section>
+
+        <section class="conteudo-senha">
+            <label for="campo-senha" class="conteudo-senha__label">Senha gerada</label>
+            <div class="conteudo-senha__box">
+                <input name="senha" type="text" id="campo-senha" readonly placeholder="Sua senha aparecerá aqui">
+            </div>
+        </section>
+
+        <section class="parametro">
+            <h3 class="parametro-titulo">Personalize sua senha</h3>
+            
+            <div class="parametro-coluna__senha">
+                <div class="parametro-senha">
+                    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
+                    <div class="parametro-senha-botoes">
+                        <button type="button" class="parametro-senha__botao" aria-label="Diminuir tamanho da senha">-</button>
+                        <p class="parametro-senha__texto">12</p>
+                        <button type="button" class="parametro-senha__botao" aria-label="Aumentar tamanho da senha">+</button>
+                    </div>
+                </div>
+
+                <div class="parametro-senha">
+                    <h4 class="parametro-senha__titulo">Características da senha</h4>
+                </div>
+
+                <div class="parametro-senha">
+                    <h4 class="parametro-senha__titulo">Força da senha</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js" defer></script>
+</body>
+
+</html>
+
