@@ -4,44 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Senha</title>
+    <title>Gerador de Senha Seguro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main class="conteudo">
-        <section class="conteudo-titulo">
-            <img src="oo.png" alt="Ícone de cadeado destravado" class="titulo-icone">
-            <h1 class="titulo-principal">Gerador de senhas</h1>
-            <h2 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h2>
-        </section>
+        <!-- Cabeçalho -->
+        <header class="conteudo-titulo">
+            <img src="mi.jpeg" alt="Ícone de cadeado" class="titulo-icone">
+            <h1 class="titulo-principal">Gerador de Senhas</h1>
+            <p class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</p>
+        </header>
 
-        <section class="conteudo-senha">
+        <!-- Display da Senha Gerada -->
+        <section class="conteudo-senha card">
             <label for="campo-senha" class="conteudo-senha__label">Senha gerada</label>
             <div class="conteudo-senha__box">
                 <input name="senha" type="text" id="campo-senha" readonly placeholder="Sua senha aparecerá aqui">
+                <div class="acoes-senha">
+                    <button type="button" id="btn-copiar" class="btn-acao" title="Copiar senha">Copiar</button>
+                    <button type="button" id="btn-gerar" class="btn-acao btn-icone" title="Gerar nova senha">↻</button>
+                </div>
             </div>
         </section>
 
-        <section class="parametro">
-            <h3 class="parametro-titulo">Personalize sua senha</h3>
+        <!-- Painel de Configurações -->
+        <section class="parametro card">
+            <h2 class="parametro-titulo">Personalize sua senha</h2>
             
-            <div class="parametro-coluna__senha">
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
+            <div class="parametro-grid">
+                <!-- Controle de Tamanho -->
+                <div class="parametro-item">
+                    <h3 class="parametro-item__titulo">Número de caracteres</h3>
                     <div class="parametro-senha-botoes">
-                        <button type="button" class="parametro-senha__botao" aria-label="Diminuir tamanho da senha">-</button>
-                        <p class="parametro-senha__texto">12</p>
-                        <button type="button" class="parametro-senha__botao" aria-label="Aumentar tamanho da senha">+</button>
+                        <button type="button" id="btn-diminuir" class="parametro-senha__botao" aria-label="Diminuir tamanho">-</button>
+                        <span id="tamanho-texto" class="parametro-senha__texto">12</span>
+                        <button type="button" id="btn-aumentar" class="parametro-senha__botao" aria-label="Aumentar tamanho">+</button>
                     </div>
                 </div>
 
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Características da senha</h4>
+                <!-- Características / Filtros -->
+                <div class="parametro-item">
+                    <h3 class="parametro-item__titulo">Características</h3>
+                    <div class="parametro-checkboxes">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="chk-maiusculas" checked>
+                            Letras maiúsculas (A-Z)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="chk-minusculas" checked>
+                            Letras minúsculas (a-z)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="chk-numeros" checked>
+                            Números (0-9)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="chk-simbolos" checked>
+                            Símbolos (!@#$)
+                        </label>
+                    </div>
                 </div>
 
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Força da senha</h4>
+                <!-- Indicador de Força -->
+                <div class="parametro-item">
+                    <h3 class="parametro-item__titulo">Força da senha</h3>
+                    <div class="forca-container">
+                        <div class="barra-forca">
+                            <div id="forca-indicador" class="forca-indicador"></div>
+                        </div>
+                        <span id="forca-rotulo" class="forca-rotulo">Forte</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -51,4 +85,3 @@
 </body>
 
 </html>
-
