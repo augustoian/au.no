@@ -26,6 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 24px 16px;
+    font-variant: small-caps; /* Aplica o estilo Small Caps globalmente */
 }
 
 .conteudo {
@@ -97,6 +98,7 @@ body {
     font-weight: 700;
     width: 100%;
     letter-spacing: 2px;
+    font-variant: small-caps; /* Aplica Small Caps no campo de entrada */
 }
 
 #campo-senha:focus {
@@ -120,6 +122,7 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     white-space: nowrap;
+    font-variant: small-caps;
 }
 
 .btn-icone {
@@ -164,7 +167,7 @@ body {
     font-weight: 700;
 }
 
-/* Botoes + / - */
+/* Botões + / - */
 .parametro-senha-botoes {
     display: flex;
     align-items: center;
