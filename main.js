@@ -111,6 +111,16 @@ btnCopiar.addEventListener('click', () => {
     });
 });
 
+// Evento para atualizar a força ao digitar manualmente
+campoSenha.addEventListener('input', (e) => {
+    const valor = e.target.value;
+    calcularForca(valor);
+    if (valor.length > 0) {
+        tamanhoSenha = valor.length;
+        tamanhoTexto.textContent = tamanhoSenha;
+    }
+});
+
 // Listeners de Eventos
 [chkMaiusculas, chkMinusculas, chkNumeros, chkSimbolos].forEach(chk => {
     chk.addEventListener('change', gerarSenha);
